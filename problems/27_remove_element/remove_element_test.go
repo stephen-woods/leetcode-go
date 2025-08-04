@@ -1,9 +1,8 @@
 package problem27
 
 import (
-	"slices"
-	"sort"
 	"testing"
+	"leetcode-go/utils"
 )
 
 // Example 1:
@@ -30,7 +29,7 @@ func TestRemoveElement1(t *testing.T) {
 	}
 
 	nums2 := nums[:k]
-	if !equalUnordered(nums2, expected) {
+	if !utils.EqualUnordered(nums2, expected) {
 		t.Errorf("Expected %v, but got %v", expected, nums2)
 	}
 }
@@ -61,27 +60,9 @@ func TestRemoveElement2(t *testing.T) {
 	}
 
 	nums2 := nums[:k]
-	if !equalUnordered(nums2, expected) {
+	if !utils.EqualUnordered(nums2, expected) {
 		t.Errorf("Expected %v, but got %v", expected, nums2)
 	}
 
-}
-
-
-// Checks if two slices contain the same elements, regardless of order.
-func equalUnordered(a, b []int) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	aCopy := slices.Clone(a)
-	bCopy := slices.Clone(b)
-	sort.Ints(aCopy)
-	sort.Ints(bCopy)
-	for i := range aCopy {
-		if aCopy[i] != bCopy[i] {
-			return false
-		}
-	}
-	return true
 }
 
