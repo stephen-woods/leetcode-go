@@ -1,4 +1,4 @@
-package problem88
+package leetcode
 
 import (
 	"reflect"

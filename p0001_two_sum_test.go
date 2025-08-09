@@ -1,4 +1,4 @@
-package problem1
+package leetcode
 
 import (
 	"leetcode-go/utils"

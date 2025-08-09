@@ -1,5 +1,7 @@
-// Package problem1
-//
+// Package leetcode contains code a personal repository of leetcode problem solutions using the Go
+// programming language
+package leetcode
+
 // Given an array of integers nums and an integer target, return indices of the
 // two numbers such that they add up to target.
 //
@@ -7,8 +9,6 @@
 // not use the same element twice.
 //
 // You can return the answer in any order.
-package problem1
-
 func twoSum(nums []int, target int) []int {
 
 	indices := map[int]int{}

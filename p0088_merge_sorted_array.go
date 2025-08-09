@@ -1,5 +1,5 @@
-// Package problem88
-//
+package leetcode
+
 // You are given two integer arrays nums1 and nums2, sorted in non-decreasing
 // order, and two integers m and n, representing the number of elements in
 // nums1 and nums2 respectively.
@@ -36,8 +36,6 @@
 // nums1.length == m + n nums2.length == n
 // 0 <= m, n <= 200
 // 1 <= m + n <= 200 -109 <= nums1[i], nums2[j] <= 109
-package problem88
-
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	// If nums2 is empty, no need to merge
 	if n == 0 {
